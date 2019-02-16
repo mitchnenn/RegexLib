@@ -5,7 +5,7 @@ namespace RegexLib
     public class FileRegex : Regex
     {
         public FileRegex() 
-            : base(@"\w+:\\(\w+\\)*(?<file>\w*\.\w*)", RegexOptions.Compiled | RegexOptions.IgnoreCase)
+            : base(@"(\w+:)?[\\|/](\w+[\\|/])*(?<file>\w*\.\w*)", RegexOptions.Compiled | RegexOptions.IgnoreCase)
         {
             
         }
